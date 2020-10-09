@@ -1,0 +1,37 @@
+%% # vim: set ft=html:
+%% cascade 'account/_base.tx' { page => { title => "Create Account", background => "bg-register-image" }}
+
+%% around desc -> {
+    <h1 class="h4 text-gray-900 mb-2">Create your account</h1>
+    <p class="mb-4">These words are words about creating an account.</p>
+%% }
+
+%% before body -> {
+<form class="user" action="" method="POST">
+    <div class="form-group">
+        <input type="text"  class="form-control form-control-user" name="name"  placeholder="Full Name">
+    </div> 
+    <div class="form-group">
+        <input type="email" class="form-control form-control-user" name="email" placeholder="Email Address">
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <input type="password" class="form-control form-control-user" name="password"   placeholder="Password">
+        </div>
+        <div class="col-sm-6">
+            <input type="password" class="form-control form-control-user" name="password_c" placeholder="Repeat Password">
+        </div>
+    </div>
+    <input type="submit" value="Create Account" class="btn btn-primary btn-user btn-block">
+</form>
+%% }
+
+%% before links -> {
+<!-- Forgot / Login Links -->
+<div class="text-center">
+    <a class="small" href="/account/forgot">Forgot Password?</a>
+</div>
+<div class="text-center">
+    <a class="small" href="/account/login">Already have an account? Login!</a>
+</div>
+%% }
