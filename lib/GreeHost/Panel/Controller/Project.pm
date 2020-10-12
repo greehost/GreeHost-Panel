@@ -7,6 +7,11 @@ BEGIN { extends 'Catalyst::Controller'; }
 # /projects/
 sub get_index :Path :Args(0) :Method('GET') {
     my ( $self, $c ) = @_;
+
+    $c->stash->{projects} = [
+        { id => 1, name => 'todaychecklist.com', desc => 'The Today Checklist Website' },
+        { id => 2, name => 'greehost.org',       desc => 'GreeHost Information Site' },
+    ];
 }
 
 # /projects/

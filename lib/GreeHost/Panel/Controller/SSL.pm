@@ -8,6 +8,11 @@ BEGIN { extends 'Catalyst::Controller'; }
 sub get_index :Path :Args(0) :Method('GET') {
     my ( $self, $c ) = @_;
 
+    $c->stash->{certs} = [
+        { id => 1, name => 'todaychecklist.com', domains => [ 'www.todaychecklist.com' ] },
+        { id => 2, name => 'greehost.org',       domains => [qw( www.greehost.org )]     },
+        { id => 3, name => 'greehost.com',       domains => [qw( *.greehost.com *.mn.greehost.com )] },
+    ];
 }
 
 # /ssl
