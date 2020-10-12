@@ -1,0 +1,35 @@
+%% cascade 'project/_base.tx'
+
+%% around header -> {
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Create Domain in SSL Store</h1>
+          </div>
+%% }
+
+
+%% around content -> {
+    <form class="user" action="/project/create" method="POST">
+        <div class="form-group">
+            <input name="name" type="text"  class="form-control form-control-user" placeholder="Domain Name">
+        </div> 
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">DNS Provider</label><select class="form-control form-control-solid" id="exampleFormControlSelect1">
+                <option>Linode</option>
+                <option<GreeHost</option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <input name="apikey" type="text" class="form-control form-control-user" placeholder="Linode DNS Key">
+        </div>
+
+
+        <div class="form-group">
+            <textarea name="domains" placeholder="List Additional Domains, One Per Line" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <input type="submit" value="Add Domain" class="btn btn-primary btn-user btn-block">
+    </form>
+%% };

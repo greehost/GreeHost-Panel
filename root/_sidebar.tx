@@ -37,9 +37,9 @@
       
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="/project">
+        <a class="nav-link" href="/ssl">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Domains</span></a>
+          <span>SSL Store</span></a>
       </li>
 
       <!-- Divider -->

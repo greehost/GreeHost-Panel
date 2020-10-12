@@ -7,7 +7,7 @@
 
   <!-- Page Wrapper -->
   <div id="wrapper">
-    %% include '_sidebar.tx'
+    %% include 'project/_sidebar.tx'
 
 
     <!-- Content Wrapper -->

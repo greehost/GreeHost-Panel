@@ -8,7 +8,6 @@ BEGIN { extends 'Catalyst::Controller'; }
 sub get_index :Path :Args(0) :Method('GET') {
     my ( $self, $c ) = @_;
 
-    $c->response->body('Matched GreeHost::Panel::Controller::SSL::view_certs in Project.');
 }
 
 # /ssl
@@ -17,12 +16,16 @@ sub post_index :Path :Args(0) :Method('POST') {
 
     $c->response->body('Matched GreeHost::Panel::Controller::SSL::create_cert in Project.');
 }
+# /projects/new
+sub get_create :Path('create') :Args(0) :Method('GET') {
+    my ( $self, $c ) = @_;
+}
+
 
 # /ssl/<id>
 sub get_ssl :Path :Args(1) :Method('GET') {
     my ( $self, $c ) = @_;
 
-    $c->response->body('Matched GreeHost::Panel::Controller::SSL::view_cert in Project.');
 }
 
 # /ssl/<id>

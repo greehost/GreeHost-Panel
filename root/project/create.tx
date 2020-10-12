@@ -1,0 +1,32 @@
+%% cascade 'project/_base.tx'
+
+%% around header -> {
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Create Project</h1>
+          </div>
+%% }
+
+
+%% around content -> {
+    <p>Create Project</p>
+    <form class="user" action="/project/create" method="POST">
+        <div class="form-group">
+            <input name="name" type="text"  class="form-control form-control-user" placeholder="Project Name">
+        </div> 
+        <div class="form-group">
+            <input name="desc" type="text" class="form-control form-control-user" placeholder="Project Description">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Git Repository URL</label>
+            <input name="repo" type="text" class="form-control form-control-user" placeholder="Project Description">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">SSH Deploy Key</label>
+            <textarea name="sshkey" placeholder="SSH Deploy Key" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <input type="submit" value="Create Project" class="btn btn-primary btn-user btn-block">
+    </form>
+%% };

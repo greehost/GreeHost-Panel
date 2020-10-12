@@ -16,6 +16,12 @@ sub post_index :Path :Args(0) :Method('POST') {
     $c->response->body('Matched GreeHost::Panel::Controller::Project::create_project in Project.');
 }
 
+# /projects/new
+sub get_create :Path('create') :Args(0) :Method('GET') {
+    my ( $self, $c ) = @_;
+}
+
+
 # /projects/<id>
 sub get_project :Path :Args(1) :Method('GET') {
     my ( $self, $c ) = @_;
